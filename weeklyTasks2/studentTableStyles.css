@@ -1,0 +1,203 @@
+/* Container */
+.student-table-container {
+  padding: 24px;
+  background: #fff5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Search Bar */
+.student-table-searchBar-div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.student-search-input {
+  flex: 1;
+  max-width: 480px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.student-search-input::placeholder {
+  color: #6b7280;
+}
+
+.student-search-input:focus {
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.25);
+  background: #ffffff;
+}
+
+.student-search-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f43f5e, #ef4444);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  cursor: pointer;
+  transition: transform 120ms ease, filter 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 6px 16px rgba(244, 63, 94, 0.35);
+}
+
+.student-search-button:hover {
+  filter: brightness(1.05);
+}
+
+.student-search-button:active {
+  transform: translateY(1px);
+}
+
+.student-search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Table Wrapper */
+.student-table-responsive {
+  overflow: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(244, 63, 94, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(244, 63, 94, 0.18);
+}
+
+/* Base Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111827;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  font-size: 14px;
+}
+
+/* Stripes */
+.student-table-striped tbody tr:nth-child(odd) {
+  background: #fff1f2;
+}
+
+/* Header */
+.student-table-header th {
+  position: sticky;
+  top: 0;
+  background: #ffe4e6;
+  backdrop-filter: saturate(160%) blur(4px);
+  color: #7f1d1d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(244, 63, 94, 0.25);
+  text-align: left;
+}
+
+/* Rows */
+.student-table-row td {
+  padding: 14px 16px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(244, 63, 94, 0.15);
+}
+
+/* Ensure strong, high-contrast text in table body */
+.student-table-body,
+.student-table-row td {
+  color: #000000;
+}
+
+.student-table-row:hover {
+  background: #fee2e2;
+  transition: background 160ms ease;
+}
+
+/* Column sizing & accents */
+.student-table-header-id,
+.student-table-row-id {
+  width: 6%;
+  color: #9f1239;
+}
+
+.student-table-header-name,
+.student-table-row-name {
+  width: 20%;
+  font-weight: 600;
+  color: #111827;
+}
+
+.student-table-header-phone,
+.student-table-row-phone,
+.student-table-header-username,
+.student-table-row-username,
+.student-table-header-website,
+.student-table-row-website,
+.student-table-header-email,
+.student-table-row-email,
+.student-table-header-company,
+.student-table-row-company,
+.student-table-header-address,
+.student-table-row-address,
+.student-table-row-category {
+  width: 12%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .student-table-header-id,
+  .student-table-row-id {
+    display: none;
+  }
+
+  .student-table-searchBar-div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .student-table-container {
+    padding: 12px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  .student-table-searchBar-div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff5f5;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .student-search-input {
+    width: 91.5%;
+  }
+
+  .student-search-button {
+    width: 100%;
+  }
+}
+
+
